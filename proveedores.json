@@ -2,6 +2,38 @@
   "schema_version": 1,
   "providers": [
     {
+      "id": "69824a98d05ee80b5cd8368e",
+      "name": "CULOGARTO"
+    },
+    {
+      "id": "694a9cd6d05ee80b5cd7eb19",
+      "name": "ORDÓÑEZ"
+    },
+    {
+      "id": "68b1dfe33451b27a40bca11d",
+      "name": "MATTEO"
+    },
+    {
+      "id": "68a975d43451b27a40bca0b3",
+      "name": "NANOSTREAMS"
+    },
+    {
+      "id": "68ce6e8c3451b27a40bca302",
+      "name": "NANOBOX"
+    },
+    {
+      "id": "6983264cd05ee80b5cd83776",
+      "name": "EUPHORBIA 1"
+    },
+    {
+      "id": "69618ec6d05ee80b5cd7f636",
+      "name": "ICASTRESANA"
+    },
+    {
+      "id": "695d5309d05ee80b5cd7efad",
+      "name": "TOKIO"
+    },
+    {
       "id": "69ad7d19d05ee80b5cd88ca4",
       "name": "SHICKAT"
     },
