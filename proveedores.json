@@ -2,6 +2,22 @@
   "schema_version": 1,
   "providers": [
     {
+      "id": "6a9fd362fa2693a3a8f5dcfd",
+      "name": "EUPHORBIA CHAMPIONS"
+    },
+    {
+      "id": "6aa3c781fa2693a3a8f5de17",
+      "name": "EUPHORBIA FÓRMULA 1"
+    },
+    {
+      "id": "6aa3b0eefa2693a3a8f5de10",
+      "name": "EUPHORBIA MOTOGP"
+    },
+    {
+      "id": "6abe91943224885336ef1914",
+      "name": "EUPHORBIA LIGA"
+    },
+    {
       "id": "69824a98d05ee80b5cd8368e",
       "name": "CULOGARTO"
     },
