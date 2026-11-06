@@ -1828,9 +1828,9 @@
       "banner": "no_descargado",
       "webp": "",
       "alias": [],
-      "ruta": "",
+      "ruta": "banners/tenis/tenis-australian-open.webp",
       "fallback": "",
-      "tiene_banner": false
+      "tiene_banner": true
     },
     {
       "id": "tenis-roland-garros",
