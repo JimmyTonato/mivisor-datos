@@ -838,9 +838,9 @@
       "banner": "no_descargado",
       "webp": "",
       "alias": [],
-      "ruta": "",
+      "ruta": "banners/futbol/futbol-supercopa-de-espana.webp",
       "fallback": "",
-      "tiene_banner": false
+      "tiene_banner": true
     },
     {
       "id": "futbol-copa-de-la-reina",
