@@ -1108,9 +1108,9 @@
       "banner": "no_descargado",
       "webp": "",
       "alias": [],
-      "ruta": "",
+      "ruta": "banners/futbol/futbol-serie-a-italia.webp",
       "fallback": "",
-      "tiene_banner": false
+      "tiene_banner": true
     },
     {
       "id": "futbol-serie-b-italia",
