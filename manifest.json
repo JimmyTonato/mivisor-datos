@@ -3163,9 +3163,9 @@
       "banner": "no_descargado",
       "webp": "",
       "alias": [],
-      "ruta": "",
+      "ruta": "banners/motor/motor-formula-1.webp",
       "fallback": "",
-      "tiene_banner": false
+      "tiene_banner": true
     },
     {
       "id": "motor-formula-2",
