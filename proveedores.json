@@ -2,8 +2,16 @@
   "schema_version": 1,
   "providers": [
     {
-      "id": "111",
-      "name": "Tedt"
+      "id": "69ad7d19d05ee80b5cd88ca4",
+      "name": "SHICKAT"
+    },
+    {
+      "id": "682cb7103451b27a40bc9aa2",
+      "name": "MANMANDURRIAS"
+    },
+    {
+      "id": "681fc74c1833d17ffd9a9c59",
+      "name": "ELCANO"
     }
   ]
 }
