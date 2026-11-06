@@ -43,9 +43,9 @@
       "banner": "no_descargado",
       "webp": "",
       "alias": [],
-      "ruta": "",
+      "ruta": "banners/futbol/futbol-conference-league.webp",
       "fallback": "",
-      "tiene_banner": false
+      "tiene_banner": true
     },
     {
       "id": "futbol-uefa-super-cup",
