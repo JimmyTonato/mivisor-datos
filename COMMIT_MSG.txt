@@ -1,0 +1,7 @@
+catalogo: primera lista de servidores del catálogo de Ace Stream
+
+Rama nueva e independiente (no toca main, banners ni providers).
+- catalog-hosts.json: 51.158.152.5:8081 primero + los 4 de serie de Outpace.
+- README.md: formato, cuándo actualizar y cómo publicar.
+- tools/comprobar-catalogo.sh: ¿responden los servidores?
+- tools/descubrir-catalogo.sh: qué servidores usa el motor oficial al abrir un ID.

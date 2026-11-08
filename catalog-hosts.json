@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "updated": "2026-11-08",
+  "hosts": [
+    { "host": "51.158.152.5",    "port": 8081, "note": "Visto en uso el 08-11-2026 (resuelve IDs que los de abajo no)" },
+    { "host": "5.252.161.191",   "port": 8081, "note": "De serie en Outpace (motor oficial 3.2.11, julio 2026)" },
+    { "host": "77.120.105.88",   "port": 8081, "note": "De serie en Outpace" },
+    { "host": "64.227.119.64",   "port": 8081, "note": "De serie en Outpace" },
+    { "host": "163.172.187.185", "port": 8081, "note": "De serie en Outpace" }
+  ]
+}
