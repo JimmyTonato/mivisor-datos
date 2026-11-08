@@ -2,6 +2,10 @@ catalogo: primera lista de servidores del catálogo de Ace Stream
 
 Rama nueva e independiente (no toca main, banners ni providers).
 - catalog-hosts.json: 51.158.152.5:8081 primero + los 4 de serie de Outpace.
-- README.md: formato, cuándo actualizar y cómo publicar.
-- tools/comprobar-catalogo.sh: ¿responden los servidores?
+- README.md: formato, cómo verificar, regla para no acumular IPs muertas y cómo publicar.
+- PROMPT-RELEASE.md: plantilla para pedir altas de IPs al equipo de release.
+- tools/verificar-catalogo.sh: prueba real de cada servidor (resuelve IDs con Outpace usando solo ese servidor).
+- tools/comprobar-catalogo.sh: prueba rápida de puerto.
 - tools/descubrir-catalogo.sh: qué servidores usa el motor oficial al abrir un ID.
+- tools/outpace-mivisor.patch: el parche de MiVisor para Outpace (lo necesita el verificador).
+- para-main/: workflow opcional de verificación semanal (va en la rama main).

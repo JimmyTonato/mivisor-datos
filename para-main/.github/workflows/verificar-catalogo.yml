@@ -1,0 +1,57 @@
+# Va en la rama main de mivisor-datos (GitHub solo lanza los horarios desde la rama principal).
+# Cada lunes (y a mano) comprueba que los servidores de la rama «catalogo» siguen valiendo y apunta el resultado.
+# Necesita la variable del repositorio CATALOGO_IDS: 2 o 3 IDs que funcionen, separados por espacios.
+name: Verificar catálogo
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency: verificar-catalogo
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      OUTPACE_REPO: https://github.com/jamezrin/outpace.git
+      OUTPACE_COMMIT: 7d77f410c9bde453cb5f5816ab37f5e571d6e5f0
+    steps:
+      - name: Rama catalogo
+        uses: actions/checkout@v4
+        with:
+          ref: catalogo
+      - name: Rust
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: 1.99.1
+      - name: Outpace con el parche de MiVisor
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none "$OUTPACE_REPO" "$RUNNER_TEMP/outpace"
+          cd "$RUNNER_TEMP/outpace"
+          git checkout --detach "$OUTPACE_COMMIT"
+          git apply "$GITHUB_WORKSPACE/tools/outpace-mivisor.patch"
+          cargo build --release -p ace-engine --bin outpace
+          echo "OUTPACE=$RUNNER_TEMP/outpace/target/release/outpace" >> "$GITHUB_ENV"
+      - name: Verificar servidores
+        shell: bash
+        env:
+          IDS: ${{ vars.CATALOGO_IDS }}
+        run: |
+          set -euo pipefail
+          test -n "$IDS" || { echo "Falta la variable CATALOGO_IDS"; exit 1; }
+          args=(); for i in $IDS; do args+=(--id "$i"); done
+          bash tools/verificar-catalogo.sh "${args[@]}" --actualizar | tee resultado.txt
+      - name: Guardar el resultado en la rama catalogo
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --quiet catalog-hosts.json && { echo "Sin cambios"; exit 0; }
+          python3 -m json.tool catalog-hosts.json > /dev/null
+          git config user.name "verificador-catalogo"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -am "catalogo: verificación automática $(date +%F)"
+          git push origin HEAD:catalogo
