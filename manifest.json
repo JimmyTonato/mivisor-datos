@@ -1,0 +1,22 @@
+{
+ "formato": "mivisor.biblioteca/2",
+ "revision": 70,
+ "publicado": "2026-11-14T15:31:31Z",
+ "cambios_desde": 1,
+ "cifrado": {
+  "alg": "AES-256-GCM",
+  "kdf": "PBKDF2-HMAC-SHA256",
+  "iteraciones": 200000,
+  "comprimido": "gzip",
+  "cabecera": "MVB1 + sal(16) + nonce(12)"
+ },
+ "ficheros": {
+  "biblioteca": "biblioteca.enc",
+  "cambios": "cambios.enc"
+ },
+ "totales": {
+  "canales": 198,
+  "ids": 271,
+  "categorias": 45
+ }
+}
